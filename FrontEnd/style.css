@@ -3,16 +3,50 @@
     margin: 0;
 }
 
+/*Đầu website*/
 #header{
-    background-color: #000;
     height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
+    display: flex;
+    justify-content: center;
+}
+#header #hd-container{
+    background-color: bisque;
+    width: 90%;
+    height: 100%;
+    display: flex;
 }
 
+#hd-container #hd-logo{
+    background-color: cadetblue;
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hd-logo .hd-logo-link{
+    text-decoration: none;
+}
+
+#hd-container #hd-menu{
+    background-color: aliceblue;
+    flex-basis: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#hd-menu .menu-item{
+
+}
+
+#hd-container #hd-orther{
+    background-color: yellow;
+    flex-basis: 25%;
+}
+
+/*Thân website*/
 #main{
-    height: 1900px;
-    width: 100%;
-    background-color: aqua;
+
 }
