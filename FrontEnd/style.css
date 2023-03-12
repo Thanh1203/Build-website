@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 /*Đầu website*/
@@ -13,14 +14,12 @@
     justify-content: center;
 }
 #header #hd-container{
-    background-color: bisque;
     width: 90%;
     height: 100%;
     display: flex;
 }
 
 #hd-container #hd-logo{
-    background-color: cadetblue;
     flex-basis: 20%;
     display: flex;
     align-items: center;
@@ -28,10 +27,17 @@
 }
 #hd-logo .hd-logo-link{
     text-decoration: none;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hd-logo .hd-logo-img{
+    width: auto;
+    height: 100%;
 }
 
 #hd-container #hd-menu{
-    background-color: aliceblue;
     flex-basis: 55%;
     display: flex;
     justify-content: space-around;
@@ -41,12 +47,12 @@
 
 }
 
-#hd-container #hd-orther{
-    background-color: yellow;
+#hd-container #hd-other{
     flex-basis: 25%;
 }
 
 /*Thân website*/
 #main{
-
+    width: auto;
+    height: 1900px;
 }
