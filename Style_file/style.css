@@ -1,0 +1,77 @@
+:root{
+    --W-color:#fff;
+    --B-color: #000;
+    --Text-color: #333;
+}
+.grid{
+    width: 1920px;
+    max-width: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'Roboto Slab', serif;
+    font-size: 100%;
+    line-height: 1rem;
+}
+
+/*Đầu website*/
+#header{
+    height: 80px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+#header #hd-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+
+/*logo*/
+#hd-container #hd-logo{
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hd-logo .hd-logo-link{
+    text-decoration: none;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hd-logo .hd-logo-img{
+    width: auto;
+    height: 100%;
+}
+
+/*Menu*/
+#hd-container #hd-menu{
+    flex-basis: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#hd-menu .menu-item .menu-item-link{
+    text-decoration: none;
+    color: var(--Text-color);
+}
+
+/*other*/
+#hd-container #hd-other{
+    flex-basis: 25%;
+}
+
+/*Thân website*/
+#main{
+    width: auto;
+    height: 1900px;
+}
