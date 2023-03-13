@@ -26,7 +26,6 @@ html{
     top: 0;
     display: flex;
     justify-content: center;
-    background-color: aquamarine;
 }
 #header #hd-container{
     width: 90%;
@@ -55,7 +54,7 @@ html{
 
 /*Menu*/
 #hd-container #hd-menu{
-    flex-basis: 55%;
+    flex-basis: 60%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -64,10 +63,20 @@ html{
     text-decoration: none;
     color: var(--Text-color);
 }
-
+#hd-menu .menu-item .menu-item-link .menu-item-icon{
+    margin-left: 3px;
+    
+}
+#hd-menu .menu-item .menu-item-link:hover{
+    color: #FF6600; 
+}
+#hd-menu .menu-item .menu-item-link:hover .menu-item-icon{
+    transform: rotate(180deg);
+    transition: .3s ease-in-out;
+}
 /*other*/
 #hd-container #hd-other{
-    flex-basis: 25%;
+    flex-basis: 20%;
 }
 
 /*Thân website*/
