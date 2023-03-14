@@ -3,6 +3,7 @@
     --B-color: #000;
     --Text-color: #333;
     --color-hover: #ff6600;
+
 }
 .grid{
     width: 1920px;
@@ -21,6 +22,32 @@
 .height100{
     width: auto;
     height: 100%;
+}
+.left-100{
+    left: -100%;
+}
+.left-200{
+    left: -200%;
+}
+.left-300{
+    left: -300%;
+}
+.left-400{
+    left: -400%;
+}
+.left-500{
+    left: -500%;
+}
+.left-600{
+    left: -600%;
+}
+.text-link{
+    text-decoration: none;
+    color: var(--Text-color);
+}
+.flex-jp-sq{
+    display: flex;
+    justify-content: space-around;
 }
 *{
     padding: 0;
@@ -46,11 +73,10 @@ html{
     display: flex;
     width: 90%;
     height: 100%;
-    background-color: aquamarine;
 }
 /* logo */
 #hd-logo{
-    flex-basis: 20%;
+    flex-basis: 10%;
     display: flex;
     justify-content: center;
 }
@@ -59,25 +85,22 @@ html{
     height: 60%;
     align-self: center;
 }
+/* end logo */
 /* menu */
 #hd-menu{
-    flex-basis: 60%;
+    flex-basis: 65%;
 }
 /* father nav */
 #hd-nav{
-    display: flex;
-    justify-content: space-around;
     align-items: center;
     align-content: center;
+    position: relative;
+    flex-basis: 90%;
 }
 #hd-nav .hdnav-item{
     list-style: none;
-    align-self: center;
-    flex-grow: 1;
-}
-#hd-nav .hdnav-item .nav-link{
-    text-decoration: none;
-    color: var(--Text-color);
+    flex-basis: 14.3%;
+    position: relative;
     text-align: center;
 }
 #hd-nav .hdnav-item .nav-link .nav-icon{
@@ -89,15 +112,45 @@ html{
 /* child nav */
 #hd-nav .hdnav-item .subnav{
     display: none;
-    background-color: var(--W-color);
     position: absolute;
-    top: 75px;
+    top: 40px;
+    z-index: 1;
+    width: 700%;
+    animation: Slideupheader ease-out .3s;
+    background-color: var(--W-color);
+}
+#hd-nav .hdnav-item .subnav::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: 14%;
+    height: calc(100% - 90%);
+    top: -7%;
+    background-color: transparent;
+}
+#hd-nav .hdnav-item .subnav2::before{
+    left: 14.5%;
+}
+#hd-nav .hdnav-item .subnav3::before{
+    left: 28.7%;
+}
+#hd-nav .hdnav-item .subnav4::before{
+    left: 43%;
+}
+#hd-nav .hdnav-item .subnav5::before{
+    left: 57.4%;
+}
+#hd-nav .hdnav-item .subnav6::before{
+    left: 71.5%;
+}
+#hd-nav .hdnav-item .subnav7::before{
+    left: 85.9%;
 }
 #hd-nav .hdnav-item .subnav .subnav-container{
     display: flex;
     list-style: none;
-    justify-content: space-around;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 #hd-nav .hdnav-item .subnav .subnav-container .subnav-item{
     height: 40%;
@@ -118,17 +171,27 @@ html{
 #hd-nav .hdnav-item .subnav .subnav-container .subnav-item .subnav-link .subnav-img{
     align-self: center;
 }
-/* hover taget */
-#hd-nav  .hdnav-item:hover .nav-link{
+/* hover taget in menu */
+#hd-nav .hdnav-item:hover .nav-link{
     color: var(--color-hover);
 }
-#hd-nav  .hdnav-item:hover .nav-icon{
+#hd-nav .hdnav-item:hover .nav-icon{
     transform: rotate(180deg);
-    transition: .3s ease-in-out;
+    transition: .3s ease-out;
 }
-#hd-nav  .hdnav-item:hover .subnav{
+#hd-nav .hdnav-item:hover .subnav{
     display: block;
 }
+/* endl menu */
+/* extend */
+#hd-extend{
+    align-items: center;
+    flex-basis: 25%;
+}
+#hd-extend .hdextend-item{
+    flex-basis: 20%;
+}
+
 
 
 
@@ -139,5 +202,17 @@ html{
 #main{
     width: auto;
     height: 1900px;
-    background-color:antiquewhite;
+    background-color: antiquewhite;
+}
+
+/* Animation */
+@keyframes Slideupheader {
+    from{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
